@@ -1,6 +1,5 @@
 
 body {
-    background-color: #FAFAFA;
     font-family: Arial;
     display: flex;
     align-items: center;
@@ -8,6 +7,16 @@ body {
     flex-direction: column;
     background-color: #e7e7e7;
     font-family: Arial;
+
+}
+
+.background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
 }
 
 .main {
@@ -18,17 +27,29 @@ body {
     margin-right: 25%;
     transition: 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
+
 :root {
     --baseline: 12px;
     --dark-text: #2A2935;
     --base-size: var(--baseline) * 1.2;
 }
 
+.back {
+    position: relative;
+    width: auto;
+    height: auto;
+    backface-visibility: hidden;
+
+}
+
 .left_border__book {
-    z-index: 2;
+    z-index: 1;
     position: absolute;
     width: 50%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transform: rotateY(0deg);
     transition: 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
     transform-origin: 0% 0%;
@@ -47,6 +68,15 @@ body {
     align-items: center;
     justify-content: flex-start;
     right: 0;
+}
+
+.text__front {
+    text-align: center;
+    color: rgb(226, 226, 226);
+    margin-top: 40px;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
 }
 
 .book {
@@ -76,26 +106,35 @@ body {
 .page--1 {
 
     right: 0;
-    z-index: 1;
+    z-index: 6;
 }
 
 .page--2 {
     right: 0;
-    z-index: 3;
+    z-index: 5;
 }
 
 .page--3 {
     right: 0;
-    z-index: 2;
+    z-index: 4;
 }
 
 .page--4 {
+    z-index: 3;
     right: 0;
-    z-index: 1;
 }
 .page--5 {
+    z-index: 2;
     right: 0;
-    background: linear-gradient(-90deg,rgb(250, 250, 250) 70%,rgb(206, 206, 206));
+}
+
+.page--6 {
+    z-index: 1;
+    right: 0;
+}
+
+.page--7 {
+    right: 0;
 }
 
 .page__front {
@@ -127,7 +166,6 @@ body {
 }
 
 .page__content {
-
     width: auto;
     height:auto;
     display: flex;
@@ -146,7 +184,6 @@ body {
 }
 
 .page__text {
-    
     font-size: calc(var(--baseline)*1,2);
     line-height: 1.2;
     letter-spacing: 0.2px;
@@ -173,7 +210,7 @@ input[type=checkbox]{
 
 input[type=checkbox]:checked+.page {
 	transform: rotateY(-180deg);
-	z-index: 2;
+	z-index: 7;
 }
 
 input[type=checkbox]:checked+.border {
