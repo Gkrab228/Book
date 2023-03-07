@@ -1,5 +1,5 @@
 body {
-    height: fit-content;
+    
     margin: 0;
     font-family: Hacked;
     height: 100vh;
@@ -8,6 +8,25 @@ body {
     font-family: Hacked;
     src: url(https://hackedfont.com/HACKED.ttf);
 }
+.link_css {
+  margin-left: 4%;
+  margin-bottom: 1%;
+  position: absolute;
+  font-size: 100px;
+  z-index: 4;
+  transition: ease-in 0.1s;
+}
+.link_html {
+  margin-left: 15%;
+  margin-bottom: 1%;
+  position: absolute;
+  font-size: 100px;
+  z-index: 4;
+  transition: ease-in 0.3s;
+}
+a{  color: white;
+  margin-left: 4%;
+  z-index: 4;}
 .wrapper {
     height: 100vh;
     overflow-x: hidden;
@@ -54,7 +73,7 @@ body {
     background-color: rgb(39, 39, 39);
 }
 .tresc_high {
-    margin-top: 100px;
+    margin-top: 20vh;
     color:white;
     font-family: arial;
     display: flex;
@@ -64,7 +83,7 @@ body {
     z-index: 2;
 }
 .tresc_bottom {
-  margin-bottom: 500px;
+  margin-bottom: 55vh;
   color: white;   
   font-family: arial;
   display: flex;
@@ -82,21 +101,22 @@ body {
     z-index: 2;
 }
 .back{
-  margin: -15px -60px 0 0;
+  margin: -2% -4% 0 0;
   position: absolute;
-  height: 20vh;
+  height: 35%;
   width: 50vw;
-  background-color: rgb(67, 0, 80);
+  background-color: rgb(150, 0, 180);
   z-index: 0;
   transition: ease-out 0.4s;
 }
 
 .back_bottom{
-  margin: 35px 60px 0 0;
+  margin-right: 4%;
+  margin-top: 1%;
   position: absolute;
-  height: 20vh;
+  height: 35%;
   width: 50vw;
-  background-color: rgb(25, 1, 63);
+  background-color: rgb(150, 0, 180);;
   z-index: 0;
   transition: ease-out 0.4s;
 }
