@@ -91,7 +91,6 @@ a{  color: white;
   font-weight: 700;
   width: 100%;
   z-index: 3;
-  
 }
 .tekst{
     padding: 10px;
@@ -99,15 +98,18 @@ a{  color: white;
     width: 50%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 2;
+    border-radius: 25px;
 }
 .back{
   margin: -2% -4% 0 0;
   position: absolute;
+  bottom: -2%;
   height: 35%;
   width: 50vw;
   background-color: rgb(150, 0, 180);
   z-index: 0;
   transition: ease-out 0.4s;
+  border-radius: 25px;
 }
 
 .back_bottom{
@@ -119,6 +121,7 @@ a{  color: white;
   background-color: rgb(150, 0, 180);;
   z-index: 0;
   transition: ease-out 0.4s;
+  border-radius: 25px;
 }
 
 .container {
@@ -146,7 +149,7 @@ a{  color: white;
     --clip-top: calc(var(--stack-height) * var(--index));
     --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
     clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
-    animation: stack 200ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 1s ease infinite 2s alternate-reverse;
+    animation: stack 100ms cubic-bezier(.46,.29,0,1.24) 2 backwards calc(var(--index) * 120ms), glitch 0.6s ease infinite 2s alternate-reverse;
   }
   
   .stack span:nth-child(odd) { --glitch-translate: 8px; }
